@@ -28,4 +28,24 @@ Get detailed travel directions and path finding visiualization. Use interchangeb
 
 ![direction](https://user-images.githubusercontent.com/61924332/132880947-14c6e659-4708-4bac-bcdb-36c8dbb56ed8.gif)
 
+#### The multi-dijkstra algorithm to solve the travelling courier problem
+
+
+
+https://user-images.githubusercontent.com/61924332/132925209-9a6acd69-c748-4076-b5ca-397c1054a392.mp4
+
+#### How our team tackled the Traveling Courier Problem. 
+
+Given dropoffs, pickups and depot locations, we were tasked to find the fastest delivery path to deliever packages. 
+
+We want to stay true to our goal of maintaining efficiency but also balance accuracy, so, we used multi-destination dijkstra's algorithm and multithreading to speed up the process.
+
+Let’s start with multi-destination dijkstra. How does it save time? Well, we like to imagine a single source, single destination dikjstra’s algorithm, like a rock as a source, falling into a pond.
+
+In the video for example, the destination is on top, but part of the wave goes below too. Keep in mind that this wave costs resources, for a rock, its energy, and for path-finding, this is time to search. 
+
+Multi-destination dikjstra takes this opportunity, to look at all destinations whenever you send out a wave from a single source. Some could be to the left, maybe some to the right, but we are conserving resource this way by using the same wave.
+
+We can lower the time down to 5.7 seconds by multithreading. This involves dividing the work up between the cores of the processor, and we can save the remaining time for the most important part: optimization!
+
 
